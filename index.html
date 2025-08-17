@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mein Lebenslauf – Vorname Nachname</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a; /* sehr dunkles Blau */
+      --muted: #475569; /* Schiefer */
+      --acc: #2563eb; /* Akzent */
+      --card: #f8fafc; /* sehr hell */
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0b1220; --fg:#e6e8ec; --muted:#94a3b8; --card:#0f172a; --acc:#60a5fa; }
+      img { filter: brightness(0.95) contrast(1.05); }
+    }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+    .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+    header { display:flex; gap:24px; align-items:center; padding:16px; background:var(--card); border-radius: var(--radius); }
+    header img { width:120px; height:120px; object-fit:cover; border-radius: 50%; }
+    h1 { margin:0 0 4px; font-size: clamp(28px, 4vw, 40px); }
+    .muted { color: var(--muted); }
+    .chip { display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(37,99,235,.1); color:var(--acc); font-weight:600; font-size:14px; }
+    main { display:grid; grid-template-columns: 1.2fr 2fr; gap:24px; margin-top:24px; }
+    section { background:var(--card); padding:16px; border-radius: var(--radius); }
+    h2 { margin-top:0; font-size:22px; }
+    ul { padding-left:18px; }
+    a { color: var(--acc); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top:24px; text-align:center; color:var(--muted); font-size:14px; }
+    @media (max-width: 800px) {
+      main { grid-template-columns: 1fr; }
+      header { flex-direction: column; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="Portrait_CBW_MJ5A9390.jpg" alt="Portrait von Vorname Nachname" />
+      <div>
+        <h1>Vorname Nachname</h1>
+        <p class="muted">Schüler:in · Standort (z. B. Basel) · <a href="mailto:ich@example.com">ich@example.com</a></p>
+        <span class="chip">Ich suche: Schnupperlehre / Praktikum</span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Profil</h2>
+        <p>Ich bin … (2–3 Sätze: Stärken, Interessen, Ziele).</p>
+
+        <h2>Skills</h2>
+        <ul>
+          <li>Teamarbeit</li>
+          <li>Organisation</li>
+          <li>HTML &amp; CSS (Grundlagen)</li>
+          <li>Kreativität</li>
+        </ul>
+
+        <h2>Kontakt</h2>
+        <ul>
+          <li>E‑Mail: <a href="mailto:ich@example.com">ich@example.com</a></li>
+          <li>LinkedIn/Portfolio (optional): <a href="#">Link</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Stationen</h2>
+        <ul>
+          <li><strong>2024–heute</strong> · Schule XYZ · Schwerpunkt …</li>
+          <li><strong>2023</strong> · Projekt/AG … · Aufgabe …</li>
+          <li><strong>2022</strong> · Schnupperlehre … · gelernt …</li>
+        </ul>
+
+        <h2>Projekte</h2>
+        <ul>
+          <li><strong>Webseite für …</strong> – Kurzbeschreibung, <a href="#">Link</a></li>
+          <li><strong>Plakatdesign …</strong> – Kurzbeschreibung</li>
+        </ul>
+
+        <h2>Hobbys</h2>
+        <p>Sport, Musik, Programmieren, …</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Vorname Nachname · Diese Seite ist ein Schulprojekt.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
